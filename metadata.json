@@ -1,0 +1,7 @@
+{
+  "name": "Vijnana Lab PCMB+CS",
+  "description": "A futuristic, glassmorphic virtual laboratory platform for Pre-University Course students covering Physics, Chemistry, Biology, Mathematics, and Computer Science. Features interactive simulations and an AI Tutor powered by Gemini.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

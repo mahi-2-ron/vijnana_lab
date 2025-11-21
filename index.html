@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vijnana Lab - Experience Science</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Poppins', 'sans-serif'],
+            },
+            colors: {
+              glass: {
+                100: 'rgba(255, 255, 255, 0.05)',
+                200: 'rgba(255, 255, 255, 0.1)',
+                300: 'rgba(255, 255, 255, 0.2)',
+              },
+              neon: {
+                physics: '#4ade80', // green-400
+                chemistry: '#fbbf24', // amber-400
+                biology: '#f87171', // red-400
+                math: '#60a5fa', // blue-400
+                cs: '#c084fc', // purple-400
+              }
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'spin-slow': 'spin 12s linear infinite',
+              'gradient-x': 'gradient-x 15s ease infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              'gradient-x': {
+                '0%, 100%': {
+                    'background-size': '200% 200%',
+                    'background-position': 'left center'
+                },
+                '50%': {
+                    'background-size': '200% 200%',
+                    'background-position': 'right center'
+                },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg-color: #f8fafc; /* Slate 50 */
+        --text-color: #1e293b; /* Slate 800 */
+        --glass-bg: rgba(255, 255, 255, 0.7);
+        --glass-border: rgba(0, 0, 0, 0.1);
+        --nav-bg: rgba(255, 255, 255, 0.8);
+        --gradient-1: rgba(124, 58, 237, 0.08);
+        --gradient-2: rgba(59, 130, 246, 0.08);
+        --gradient-3: rgba(236, 72, 153, 0.08);
+        --gradient-4: rgba(16, 185, 129, 0.08);
+      }
+      .dark {
+        --bg-color: #0f172a; /* Slate 900 */
+        --text-color: #e2e8f0;
+        --glass-bg: rgba(255, 255, 255, 0.03);
+        --glass-border: rgba(255, 255, 255, 0.1);
+        --nav-bg: rgba(15, 23, 42, 0.7);
+        --gradient-1: rgba(124, 58, 237, 0.15);
+        --gradient-2: rgba(59, 130, 246, 0.15);
+        --gradient-3: rgba(236, 72, 153, 0.15);
+        --gradient-4: rgba(16, 185, 129, 0.15);
+      }
+
+      body {
+        background-color: var(--bg-color);
+        background-image: 
+          radial-gradient(at 0% 0%, var(--gradient-1) 0px, transparent 50%),
+          radial-gradient(at 100% 0%, var(--gradient-2) 0px, transparent 50%),
+          radial-gradient(at 100% 100%, var(--gradient-3) 0px, transparent 50%),
+          radial-gradient(at 0% 100%, var(--gradient-4) 0px, transparent 50%);
+        background-attachment: fixed;
+        color: var(--text-color);
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      .glass-panel {
+        background: var(--glass-bg);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid var(--glass-border);
+      }
+      .glass-nav {
+        background: var(--nav-bg);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--glass-border);
+      }
+      /* 3D Transforms */
+      .preserve-3d {
+        transform-style: preserve-3d;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.05); 
+      }
+      .dark ::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.02); 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.2); 
+        border-radius: 4px;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.15); 
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(0, 0, 0, 0.3); 
+      }
+      .dark ::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.25); 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.0",
+    "react-dom/client": "https://aistudiocdn.com/react-dom@^19.2.0/client",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "firebase/app": "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js",
+    "firebase/auth": "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js",
+    "firebase/firestore": "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js",
+    "firebase/": "https://aistudiocdn.com/firebase@^12.6.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
